@@ -1,29 +1,56 @@
 # mcp-stripe
 
-MCP server for [Stripe](https://stripe.com) — customers, payments, subscriptions, invoices, payment links. Requires Stripe API key.
+Manage Stripe payments, customers, subscriptions, invoices, and payment links.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `list_customers` | List/search customers |
-| `create_customer` | Create a new customer |
-| `list_payments` | List payment intents |
-| `create_payment_link` | Create payment links for prices |
-| `list_subscriptions` | List subscriptions with status filter |
-| `list_invoices` | List invoices with status filter |
-| `get_balance` | Get account balance |
+| `list_customers` | List Stripe customers. |
+| `create_customer` | Create a new Stripe customer. |
+| `list_payments` | List recent payment intents. |
+| `create_payment_link` | Create a Stripe Payment Link for a price. |
+| `list_subscriptions` | List subscriptions. |
+| `list_invoices` | List invoices. |
+| `get_balance` | Get current Stripe account balance. |
 
-## Setup
+## Configuration
 
-```
-STRIPE_SECRET_KEY=sk_live_xxx  # or sk_test_xxx for testing
-```
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `STRIPE_SECRET_KEY` | Yes | Stripe secret key (sk_live_... or sk_test_...) |
 
-## Install
+## Installation
 
 ```bash
-npm install && npm run build
+git clone https://github.com/PetrefiedThunder/mcp-stripe.git
+cd mcp-stripe
+npm install
+npm run build
+```
+
+## Usage with Claude Desktop
+
+Add to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "stripe": {
+      "command": "node",
+      "args": ["/path/to/mcp-stripe/dist/index.js"],
+      "env": {
+        "STRIPE_SECRET_KEY": "your-stripe-secret-key"
+      }
+    }
+  }
+}
+```
+
+## Usage with npx
+
+```bash
+npx mcp-stripe
 ```
 
 ## License
