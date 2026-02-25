@@ -1,0 +1,37 @@
+{
+  "name": "mcp-stripe",
+  "version": "1.0.0",
+  "description": "MCP server for Stripe \u2014 payments, customers, subscriptions",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "stripe",
+    "payments",
+    "billing",
+    "subscriptions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "bin": {
+    "mcp-stripe": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PetrefiedThunder/mcp-stripe"
+  }
+}
