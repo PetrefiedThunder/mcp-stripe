@@ -55,4 +55,4 @@ npx mcp-stripe
 
 ## License
 
-MIT
+Apache-2.0

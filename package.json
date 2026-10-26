@@ -1,7 +1,7 @@
 {
   "name": "mcp-stripe",
   "version": "1.0.0",
-  "description": "MCP server for Stripe \u2014 payments, customers, subscriptions",
+  "description": "MCP server for Stripe — payments, customers, subscriptions",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -16,7 +16,7 @@
     "subscriptions"
   ],
   "author": "",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
